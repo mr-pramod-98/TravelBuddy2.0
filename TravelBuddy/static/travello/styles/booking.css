@@ -1,0 +1,46 @@
+#booking
+{
+    width: 60%;
+    margin-top: 500px;
+    margin-left: 20%;
+}
+#booking form
+{
+    padding-top: 0px;
+    margin-top: -100px;
+}
+#booking form .booking_details
+{
+    margin: 0px;
+    width: 100%;
+}
+#booking form .booking_details input
+{
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+    border: 0px;
+    background: black;
+    color: white;
+    opacity: 0.6;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.submit input
+{
+    width: 20%;
+    height: 45px;
+    border: 3px solid white;
+    border-radius: 50px;
+    background: #04133a;
+    color: #fff;
+
+}
+
+.submit input:hover
+{
+    border: 2px solid white;
+    opacity: 0.8;
+}

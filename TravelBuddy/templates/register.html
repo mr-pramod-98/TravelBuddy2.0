@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <title>TravelBuddy</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/index.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'account/register-login.css'%}">
+</head>
+<body id="body" style="background-image: url({% static 'travello/images/image_start.jpg' %});">
+    <header>
+        <div class="header">
+            <h2 class="main_text">TravelBuddy</h2>
+            <h2 class="sub_text">Let Us Take You Away</h2>
+
+
+            <!-- REDIRECTING TO "account" APP's "login" PAGE FROM "account" APP's "register" PAGE
+                BY CALLING THE "logout" METHOD PRESENT IN URL "/account/login"-->
+                <a class="login" href="/account/login"><button>Login</button></a>
+            <hr>
+        </div>
+    </header>
+    <section>
+
+        <div id="messages">
+                <!-- PRINTING ERROR MESSAGE -->
+                {% for message in messages %}
+
+                <h3> {{message}} </h3>
+
+                {% endfor %}
+        </div>
+
+        <div id="form_container">
+
+            <form action="/account/register/" method="post">
+
+                {% csrf_token%}
+                <div class="details"><input type="text" name="first_name" placeholder="First Name"></div><br><br>
+                <div class="details"><input type="text" name="last_name" placeholder="Last Name"></div><br><br>
+                <div class="details"><input type="text" name="username" placeholder="Username"></div><br><br>
+                <div class="details"><input type="email" name="email" placeholder="Email Address"></div><br><br>
+                <div class="details"><input type="password" name="password" placeholder="Password"></div><br><br>
+                <div class="details"><input type="password" name="password_conf" placeholder="Confirm Password"></div><br><br>
+                <div class="submit"><input type="submit" value="submit"></div>
+
+            </form>
+
+        </div>
+
+    </section>
+</body>

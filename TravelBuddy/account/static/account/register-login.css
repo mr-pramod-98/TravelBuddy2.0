@@ -1,0 +1,94 @@
+section{
+    margin: 0px;
+    margin-bottom: 50px;
+ }
+
+ header .header hr
+ {
+     margin-left: 15%;
+     margin-right: 15%;
+ }
+
+/*****************
+    Resgister Button ans Sumbit Button
+*****************/
+.header .register button, .header .login button, section #form_container form .submit input
+{
+    width: 20%;
+    height: 45px;
+    border: 0px;
+    border-radius: 50px;
+    background: #04133a;
+    color: white;
+
+}
+
+.header .register button:hover, .header .login button:hover, section #form_container form .submit input:hover
+{
+    border: 2px solid white;
+    opacity: 0.8;
+}
+
+.header .register button, .header .login button
+{
+    margin-top: 10px;
+}
+
+section #form_container form .submit input
+{
+    float: right;
+}
+
+/*****************
+    Form Styling
+*****************/
+#form_container
+{
+    width: 60%;
+    margin-left: 20%;
+}
+
+#form_container form
+{
+    padding-top: 0px;
+}
+
+#form_container form .details
+{
+    margin: 0px;
+    width: 100%;
+}
+
+#form_container form .details input
+{
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+    border: 0px;
+    background: black;
+    color: white;
+    opacity: 0.6;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#form_container form .details input:hover
+{
+    border-bottom: 2px solid red;
+    color: red;
+}
+
+/****************
+    Error Messages
+****************/
+#messages
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#messages h3
+{
+    text-align: center;
+}

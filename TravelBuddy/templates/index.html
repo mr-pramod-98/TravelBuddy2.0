@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static%}
+<head>
+    <title>TravelBuddy</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/index.css'%}">
+</head>
+<body id ="body" style="background-image: url({% static 'travello/images/image_start.jpg' %});">
+    <header>
+        <div class="header">
+            <h2 class="main_text">TravelBuddy</h2>
+            <h2 class="sub_text">Let Us Take You Away</h2>
+            <hr>
+        </div>
+    </header>
+    <section>
+
+        <!-- REDIRECTING TO "account" APP's "login" PAGE FROM "cook" APP "index" PAGE
+             BY CALLING THE "login" METHOD PRESENT IN URL "/account/login"-->
+        <a class="sign_up" href="/account/login"><button>Sign In</button></a><br><br>
+
+        <!-- REDIRECTING TO "account" APP's "register" PAGE FROM "cook" APP "index" PAGE
+             BY CALLING THE "register" METHOD PRESENT IN URL "/account/register"-->
+        <a class="register" href="/account/register"><button>Register</button></a>
+    </section>
+</body>

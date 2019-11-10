@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static%}
+<head>
+    <title>TravelBuddy</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/index.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'account/register-login.css'%}">
+</head>
+<body id="body" style="background-image: url({% static 'travello/images/image_start.jpg' %});">
+    <header>
+        <div class="header">
+
+            <h2 class="main_text">TravelBuddy</h2>
+            <h2 class="sub_text">Let Us Take You Away</h2>
+
+            <!-- REDIRECTING TO "account" APP's "register" PAGE FROM "cook" APP "index" PAGE
+                 BY CALLING THE "register" METHOD PRESENT IN URL "/account/register"-->
+            <a class="register" href="/account/register"><button>Register</button></a>
+            <hr>
+        </div>
+    </header>
+    <section>
+
+        <div id="messages">
+                <!-- PRINTING ERROR MESSAGE -->
+                {% for message in messages %}
+
+                <h3> {{message}} </h3>
+
+                {% endfor %}
+        </div>
+
+        <div id="form_container">
+
+            <form action="/account/login/" method="post">
+
+                {% csrf_token%}
+                <div class="details"><input type="text" name="username" placeholder="Username"></div><br><br>
+                <div class="details"><input type="password" name="password" placeholder="Password"></div><br><br>
+                <div class="submit"><input type="submit" value="Submit"></div>
+
+            </form>
+
+        </div>
+
+    </section>
+</body>

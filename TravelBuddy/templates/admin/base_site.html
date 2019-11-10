@@ -1,0 +1,26 @@
+{% extends "admin/base.html" %}
+
+{% block title %}TravelBuddy{% endblock %}
+
+{% block branding %}
+<style>
+    .submit-row input{
+        background-color: #417690;
+    }
+
+    .login #content{
+        border-left: 1px solid #417690;
+        border-right: 1px solid #417690;
+        border-top: 1px solid #417690;
+    }
+
+    #footer{
+        border-left: 1px solid #417690;
+        border-right: 1px solid #417690;
+        border-bottom: 1px solid #417690;
+    }
+</style>
+<h1 id="site-name"><a href="{% url 'admin:index' %}">TravelBuddy Admin Panel</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

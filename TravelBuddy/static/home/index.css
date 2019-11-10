@@ -1,0 +1,65 @@
+#body
+{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.header
+{
+    text-align: center;
+}
+
+.header .main_text
+{
+    margin: 0px;
+    margin-top: 50px;
+    padding: 0px;
+    color: #ecf0f1;
+    font-size: 100px;
+}
+
+.header .sub_text
+{
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    font-size: 20px;
+}
+
+section
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+section .sign_up button, section .register button
+{
+    margin-left: 23%;
+    width: 65%;
+    height: 45px;
+    border: 0px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background: #04133a;
+    color: white;
+}
+
+section .sign_up button:hover, section .register button:hover
+{
+    border: 2px solid red;
+    opacity: 0.7;
+}
+
+header .header hr
+{
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #fff;
+    border-color: #fff;
+}

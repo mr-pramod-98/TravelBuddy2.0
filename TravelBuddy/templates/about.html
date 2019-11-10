@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<title>About us</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'travello/styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'travello/plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'travello/plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'travello/plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'travello/plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'about/styles/about.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'about/styles/about_responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="/travello/TravelBuddy/{{user.username}}">TravelBuddy</a></div>
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li><a href="/travello/TravelBuddy/{{user.username}}" style="color:#6FFFFF;">Home</a></li>
+									<li class="active"><a href="/TravelBuddy/{{user.username}}/about" style="color:#6FFFFF;">About Us</a></li>
+									<li><a href="/account/logout" style="color:#6FFFFF;">Logout</a></li>
+								</ul>
+							</nav>
+							<div class="header_phone ml-auto" style="font-size: 20px;">Hello {{user.username}}</div>
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Home -->
+
+	<div class="home">
+		<div class="background_image" style="background-image:url({% static 'about/images/main.jpg' %})"></div>
+	</div>
+
+	<!-- About -->
+
+	<div class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">simply amazing places</div>
+					<div class="section_title"><h2>A few words about us</h2></div>
+				</div>
+			</div>
+			<div class="row about_row">
+				<div class="col-lg-6">
+					<div class="about_content">
+						<div class="text_highlight">We at travel buddy believe that convenience is essential for an amazing travel experience</div>
+						<div class="about_text">
+							<p>We at travel buddy want our customer's experience to be the best possible.We started travel buddy as felt that the process of booking a holiday was very frustating.Travel buddy offers the most effortless travel booking experience possible.We have designed our website in such a way that it provides the best experience possible</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="about_image"><img src="{% static 'about/images/about_1.jpg' %}" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Milestones -->
+
+	<div class="milestones">
+		<div class="container">
+			<div class="row">
+				
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'about/images/mountain.svg' %}" alt=""></div>
+						<div class="milestone_counter" data-end-value="{{data.count_of_locations}}">0</div>
+						<div class="milestone_text">Locations</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'about/images/island.svg' %}" alt=""></div>
+						<div class="milestone_counter" data-end-value="{{data.number_of_tie_ups}}">0</div>
+						<div class="milestone_text">Tie Up's</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'about/images/camera.svg' %}" alt=""></div>
+						<div class="milestone_counter" data-end-value="{{data.number_of_users}}">0</div>
+						<div class="milestone_text">Users</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'about/images/boat.svg' %}" alt=""></div>
+						<div class="milestone_counter" data-end-value="{{data.total_bookings}}">0</div>
+						<div class="milestone_text">Bookings</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Why Choose Us -->
+
+	<div class="why">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'about/images/why.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">simply amazing places</div>
+					<div class="section_title"><h2>Why choose us?</h2></div>
+				</div>
+			</div>
+			<div class="row why_row">
+				
+				<!-- Why item -->
+				<div class="col-lg-4 why_col">
+					<div class="why_item">
+						<div class="why_image">
+							<img src="{% static 'about/images/why_1.jpg' %}" alt="">
+							<div class="why_icon d-flex flex-column align-items-center justify-content-center">
+								<img src="{% static 'about/images/why_1.svg' %}" alt="">
+							</div>
+						</div>
+						<div class="why_content text-center">
+							<div class="why_title">Top Destinations</div>
+							<div class="why_text">
+								<p>We offer only the best Destinations available</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Why item -->
+				<div class="col-lg-4 why_col">
+					<div class="why_item">
+						<div class="why_image">
+							<img src="{% static 'about/images/why_2.jpg' %}" alt="">
+							<div class="why_icon d-flex flex-column align-items-center justify-content-center">
+								<img src="{% static 'about/images/why_2.svg' %}" alt="">
+							</div>
+						</div>
+						<div class="why_content text-center">
+							<div class="why_title">Best Services</div>
+							<div class="why_text">
+								<p>You only get the best services with Travel Buddy</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Why item -->
+				<div class="col-lg-4 why_col">
+					<div class="why_item">
+						<div class="why_image">
+							<img src="{% static 'about/images/why_3.jpg' %}" alt="">
+							<div class="why_icon d-flex flex-column align-items-center justify-content-center">
+								<img src="{% static 'about/images/why_3.svg' %}" alt="">
+							</div>
+						</div>
+						<div class="why_content text-center">
+							<div class="why_title">Best Deals</div>
+							<div class="why_text">
+								<p>We bet you can't get better deals anywhere else</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Team -->
+
+	<div class="team">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">simply amazing team</div>
+					<div class="section_title"><h2>Meet the Team</h2></div>
+				</div>
+			</div>
+			<div class="center">
+			<div class="row team_row">
+				<!-- Team Item -->
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{% static 'about/images/team_3.jpg' %}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">Nishant Mittal</a></div>
+							<div class="team_text">
+								<p>Co-Founder</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Team Item -->
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{% static 'about/images/team_4.jpg' %}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">Pramod J</a></div>
+							<div class="team_text">
+								<p>Co-Founder</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script src="{% static 'travello/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'travello/styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'travello/styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'about/plugins/greensock/TweenMax.min.js' %}"></script>
+<script src="{% static 'about/plugins/greensock/TimelineMax.min.js' %}"></script>
+<script src="{% static 'about/plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+<script src="{% static 'about/plugins/greensock/animation.gsap.min.js' %}"></script>
+<script src="{% static 'about/plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+<script src="{% static 'travello/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'travello/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'travello/plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'about/js/about.js' %}"></script>
+</body>
+</html>
